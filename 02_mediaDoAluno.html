@@ -7,11 +7,18 @@
     */
 
     //ENTRADA
-    
+    let quantasNotas = Number(prompt("Me informe Quantos numeros obteve: "))
+    let mediaAluno = 0;
+    let soma = 0;
+
 
     //PROCESSAMENTO
-    
+    for (let i = 0; i < quantasNotas; i++) {
+      const notaAluno = Number(prompt("Me informe todas as notas que ele obteve"));
+      soma = soma + notaAluno;
+      mediaAluno = soma / quantasNotas 
+    }
 
     //SAÍDA
-
+alert(`A media é ${mediaAluno}`)
 </script>
