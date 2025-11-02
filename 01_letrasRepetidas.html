@@ -10,21 +10,16 @@
     */
 
     //ENTRADA
-let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
-let tamanho = listaDeLetras.length
-let letrasUnicasv = [];
-for(let letra = 0 ; letra < tamanho ;letra++){
-const letraAtual = listaDeLetras[letra].toLowerCase();
-if (letrasUnicasv.indexOf(letraAtual) == -1){
-    letrasUnicasv.push(letraAtual)
-}
-    }
-    alert(letrasUnicasv.sort().join(", "));
-
-    
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
+    let tamanho = listaDeLetras.length
+    let letrasUnicasv = [];
     //PROCESSAMENTO
-
-    
+    for (let letra = 0; letra < tamanho; letra++) {
+        const letraAtual = listaDeLetras[letra].toLowerCase();
+        if (letrasUnicasv.indexOf(letraAtual) == -1) {
+            letrasUnicasv.push(letraAtual)
+        }
+    }
     //SAÍDA
-
+    alert(letrasUnicasv.sort().join(", "));
 </script>

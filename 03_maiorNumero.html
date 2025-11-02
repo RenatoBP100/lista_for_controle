@@ -7,11 +7,33 @@
     */
 
     //ENTRADA
-let numero
+const numero1 = Number(prompt("Me informe um numero: "));
+const numero2 = Number(prompt("Me informe o segundo numero: "));
+const numero3 = Number(prompt("Me informe o terceiro numero: "));
+const numero4 = Number(prompt("Me informe o quarto numero: "));
+const numero5 = Number(prompt("Me informe o quinto numero: "));
+let numeros = [];
+let numeroMaior = 0;
     
     //PROCESSAMENTO
-
+    numeros.push(numero1);
+    numeros.push(numero2);
+    numeros.push(numero3);
+    numeros.push(numero4);
+    numeros.push(numero5);
+for (let i = 0; i < numeros.length; i++) {
+    let element = numeros[i];
+    
+    if(element > numeroMaior){
+        numeroMaior = element
+    }
+}
     
     //SAÍDA
-
+if(numero1 < 0 || numero2 < 0 || numero3 < 0 || numero4 < 0 || numero5 < 0  ){
+    alert("Me informe um valor valido")
+}
+else{
+    alert(`Numero maior é ${numeroMaior}`);
+}
 </script>
