@@ -5,15 +5,24 @@
     Faça um programa que peça para o usuário informar um número.
      Identifique se o número fornecido pelo usuário é um número primo e apresente na tela.
     */
-
+    /*
+        PROBLEMA: VALIDAR NÚMERO PRIMO
+    Verifique se o número é 1 ou 2. O número 1 não é primo. O número 2 é primo. 
+    Verifique a divisibilidade por 2. Se o número for par e maior que 2, ele não é primo (pois é divisível por 2). 
+    Use a regra de divisibilidade por 3. Se a soma dos algarismos do número for divisível por 3, o número também é divisível por 3 e não é primo. 
+    Verifique a divisibilidade por 5. Se o número terminar em 0 ou 5, ele não é primo. 
+    Comece a dividir pelos próximos números primos: (7, 11, 13, etc.). 
+    Continue as divisões até que o quociente seja menor ou igual ao divisor . 
+    Se em nenhuma dessas divisões o resto for zero, então o número é primo. 
+        */
     //ENTRADA
-let numeroPrimo = Number(prompt("Me informe um numero "));
+    let numeroPrimo = Number(prompt("Me informe um numero "));
 
 
     //PROCESSAMENTO
-for (let i = 0; i <= Math.sqrt(numeroPrimo) ; i++) {
+for (let i = 2; i <= 2; i++){
  
-    
+   
 }
 
     //SAÍDA
