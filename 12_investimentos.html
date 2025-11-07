@@ -9,12 +9,14 @@
 let dinheiro = 1000;
 let meta = dinheiro * 2;
 let dias = 0;
-
+let corrido = 0;
     //PROCESSAMENTO
-for (let investimento = dinheiro ; investimento <= meta; investimento*1.02){
+for ( let investimento = dinheiro ; investimento <= meta; investimento*1.02){
 dias += 1
 }
-
+corrido = Math.ceil(dias / 5)
+corrido = corrido * 2
+dias = dias + corrido
     //SAÍDA
 alert(dias)
 </script>

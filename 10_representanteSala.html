@@ -9,11 +9,30 @@
     */
 
     //ENTRADA
-alert("toma toma");
+    let candidato1 = prompt("ME informe o nome do primeiro canditado para a votação de representante");
+    let candidato2 = prompt("ME informe o nome do segundo canditado para a votação de representante");
+    let candidato3 = prompt("ME informe o nome do terceiro canditado para a votação de representante");     
+    let votantes = Number(prompt("Me informe a quantidade de votantes para essa votação"))
+    let voto = 0;
+    let voto1 = 0;
+    let voto2 = 0;
+    let voto3 = 0;   
 
     //PROCESSAMENTO
-
-
+for (let i = 0; i <= votantes; i++) {
+    voto = Number(prompt(`Me informe em quem você ira votar (1-${candidato1}, 2-${candidato2}, 3-${candidato3})`))
+    if (voto == 1) {
+        voto1 ++
+    }
+    else if(voto == 2){
+        voto2++
+    }
+    else if(voto == 3){
+        voto3++
+    }
+    
+}
+let porcentagem
     //SAÍDA
 
 </script>

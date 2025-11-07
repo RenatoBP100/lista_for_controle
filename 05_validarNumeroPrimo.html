@@ -20,11 +20,19 @@
 
 
     //PROCESSAMENTO
-for (let i = 2; i <= 2; i++){
- 
+    let divisível = 0
+for (let i = 2; i < numeroPrimo; i++){
+ if(numeroPrimo % i == 0){
+   divisível++
+ }
    
 }
 
     //SAÍDA
-
+if(divisível > 0){
+    alert(`O numero ${numeroPrimo} não é primo`)
+}
+else{
+    alert(`O numero ${numeroPrimo} é primo`)
+}
 </script>

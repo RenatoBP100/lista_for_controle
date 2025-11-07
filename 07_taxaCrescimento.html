@@ -7,17 +7,30 @@
     */
 
     //ENTRADA
-let habitantes = Number(80000);
-let objetivo = Number(200000);
-let resposta = 0; 
+    let populaçao = 80000
+    let meta = 200000
+
+    let ano = 0
     //PROCESSAMENTO
-for (let i = habitantes; i <= objetivo; i * 1.03) {
-    resposta += 1;
-   
+for (ano = 0; populaçao <= meta; populaçao = populaçao * 1.03) {
+    ano++;
 }
     
     //SAÍDA
-if(i == objetivo){
-alert(`foi necessario ${resposta} de anos para atingir ${objetivo}` )
-}
+alert(`foi preciso ${ano} anos para chegar até ${meta}`)
+
+
+    /*<meta charset="UTF-8">
+<script>
+    let investimento = Number(prompt(`Qual a quantia investida?`));
+    let rendimento = Number(prompt(`Qual a taxa de rendimento da aplicação?`));
+    const taxa = 1 + rendimento / 100;
+    const dobro = investimento * 2;
+    let meses = 0;
+    for (meses = 0; investimento <= dobro; investimento = investimento * taxa) {
+        document.write(`O valor no mês ${meses} será R$ ${investimento.toFixed(2)}<br>`);
+        meses++;
+    }
+    document.write(`Serão necessários ${meses} meses para dobrar o valor investido!<br>`);
+    document.write(`O valor final aplicado será de R$ ${(investimento * taxa).toFixed(2)}`);*/
 </script>
