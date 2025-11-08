@@ -9,20 +9,22 @@
     */
 
     //ENTRADA
-    let candidato1 = prompt("ME informe o nome do primeiro canditado para a votação de representante");
-    let candidato2 = prompt("ME informe o nome do segundo canditado para a votação de representante");
-    let candidato3 = prompt("ME informe o nome do terceiro canditado para a votação de representante");     
-    let votantes = Number(prompt("Me informe a quantidade de votantes para essa votação"))
+    let candidato1 = prompt("Me informe o nome do primeiro canditado para a votação de representante: ").trim();
+    let candidato2 = prompt("Me informe o nome do segundo canditado para a votação de representante: ").trim();
+    let candidato3 = prompt("Me informe o nome do terceiro canditado para a votação de representante: ").trim();     
+    let votantes = Math.abs(Number(prompt("Me informe a quantidade de votantes para essa votação")));
     let voto = 0;
     let voto1 = 0;
     let voto2 = 0;
     let voto3 = 0;   
-
+    let porcentagem1 = 0;
+    let porcentagem2 = 0;
+    let porcentagem3 = 0;
     //PROCESSAMENTO
-for (let i = 0; i <= votantes; i++) {
+for (let i = 0; i < votantes; i++) {
     voto = Number(prompt(`Me informe em quem você ira votar (1-${candidato1}, 2-${candidato2}, 3-${candidato3})`))
     if (voto == 1) {
-        voto1 ++
+        voto1++
     }
     else if(voto == 2){
         voto2++
@@ -32,7 +34,42 @@ for (let i = 0; i <= votantes; i++) {
     }
     
 }
-let porcentagem
+porcentagem1 = voto1 /votantes*100
+porcentagem2 = voto2 /votantes*100
+porcentagem3 = voto3 /votantes*100
     //SAÍDA
+if ((voto1 > voto2 && voto1 > voto3) && (voto2 > voto3)) {
+    alert(`O ganhador foi o ${candidato1} com ${voto1} votos e ${porcentagem1}% de voto \nja o segundo lugar é o ${candidato2} com ${voto2} votos e ${porcentagem2} porcentagem de votos \ne em terceiro ficou o ${candidato3} com ${voto3} votos e ${porcentagem3} porcentagem de votos`)
+}
+else if((voto1 > voto2 && voto1 > voto3) && (voto3 > voto2)) {
+    alert(`O ganhador foi o ${candidato1} com ${voto1} votos e ${porcentagem1}% de voto \nja o segundo lugar é o ${candidato3} com ${voto3} votos e ${porcentagem3} porcentagem de votos \ne em terceiro ficou o ${candidato2} com ${voto2} votos e ${porcentagem2} porcentagem de votos`)
+}
+else if((voto2 > voto1 && voto2 > voto3) && (voto1 > voto3)) {
+    alert(`O ganhador foi o ${candidato2} com ${voto2} votos e ${porcentagem2}% de voto \nja o segundo lugar é o ${candidato1} com ${voto1} votos e ${porcentagem1} porcentagem de votos \ne em terceiro ficou o ${candidato3} com ${voto3} votos e ${porcentagem3} porcentagem de votos`)
+}
+else if((voto2 > voto1 && voto2 > voto3) && (voto3 > voto1)) {
+    alert(`O ganhador foi o ${candidato2} com ${voto2} votos e ${porcentagem2}% de voto \nja o segundo lugar é o ${candidato3} com ${voto3} votos e ${porcentagem3} porcentagem de votos \ne em terceiro ficou o ${candidato1} com ${voto1} votos e ${porcentagem1} porcentagem de votos`)
+}
+else if((voto3 > voto1 && voto3 > voto2) && (voto2 > voto1)) {
+    alert(`O ganhador foi o ${candidato3} com ${voto3} votos e ${porcentagem3}% de voto \nja o segundo lugar é o ${candidato2} com ${voto2} votos e ${porcentagem2} porcentagem de votos \ne em terceiro ficou o ${candidato1} com ${voto1} votos e ${porcentagem1} porcentagem de votos`)
+}
 
+else if((voto3 > voto1 && voto3 > voto2) && (voto1 > voto2)) {
+    alert(`O ganhador foi o ${candidato3} com ${voto3} votos e ${porcentagem3}% de voto \nja o segundo lugar é o ${candidato1} com ${voto1} votos e ${porcentagem1} porcentagem de votos \ne em terceiro ficou o ${candidato2} com ${voto2} votos e ${porcentagem2} porcentagem de votos`)
+}
+else if(voto1 == voto2 && voto3 == voto2){
+    alert(`A votação terminou em impate todos tem ${voto1} de votos ${porcentagem1}% de votos`)
+}
+else if(voto1 > voto2 && voto2 == voto3){
+    alert(`O ganhador foi o ${candidato1} com ${voto1} votos e ${porcentagem1}% de voto \n Mas o ${candidato2} e o ${candidato3} tem a mesma quantidade de votos que é ${voto2} e ${porcentagem2}% de `)
+}
+else if(voto2 > voto1 && voto1 == voto3){
+    alert(`O ganhador foi o ${candidato2} com ${voto2} votos e ${porcentagem2}% de voto \n Mas o ${candidato1} e o ${candidato3} tem a mesma quantidade de votos que é ${voto1} e ${porcentagem1}% de `)
+}
+else if(voto3 > voto2 && voto2 == voto1){
+    alert(`O ganhador foi o ${candidato3} com ${voto3} votos e ${porcentagem3}% de voto \n Mas o ${candidato2} e o ${candidato1} tem a mesma quantidade de votos que é ${voto2} e ${porcentagem2}% de `)
+}
+else{
+    alert("Algum valor invalido encontrado")
+}
 </script>
